@@ -1,0 +1,14 @@
+Place the macOS binary here as:
+
+  selfbooth-agent
+
+Build from repo on MacBook:
+
+  cd setup/booth-macos-hdmi-autodelete
+  ./build-agent.sh
+
+Or from harrords-backend:
+
+  go build -o ../setup/booth-macos-hdmi-autodelete/selfbooth-agent ./cmd/agent
+
+Then: cp .env.agent.example .env.agent → edit → ./run-agent.sh
