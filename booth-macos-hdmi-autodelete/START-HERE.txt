@@ -1,0 +1,28 @@
+BOOTH macOS — HDMI + X Acquire + autodelete (BUILD SAN)
+========================================================
+
+Binary selfbooth-agent DA CO trong zip — KHONG can Go, KHONG can build.
+
+1) Admin -> Cai booth -> tai .env.agent vao folder nay
+   (hoac: cp .env.agent.example .env.agent roi sua)
+
+   BAT BUOC sua:
+     SERVICE_TOKEN=...
+     ROOM_ID=...
+     WATCH_DIR=/Users/<ten-ban>/Pictures/FUJIFILM
+       (duong dan X Acquire — thuong Pictures/FUJIFILM tren Mac)
+
+2) Terminal:
+     cd /path/to/folder-nay
+     chmod +x *.sh selfbooth-agent
+     ./install-and-run.sh
+
+3) Kiem tra:
+     curl -s http://127.0.0.1:8791/status
+
+Dung: ./stop-agent-mac.sh
+
+Canh bao: AGENT_DELETE_AFTER_UPLOAD=true — xoa JPG sau upload OK.
+KHONG chay 2 agent cung WATCH_DIR.
+
+Gatekeeper lan dau: xattr -dr com.apple.quarantine .

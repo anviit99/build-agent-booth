@@ -11,9 +11,20 @@ Yeu cau
   - Chrome kiosk tren cung may hoac may khac (ROOM_ID khop)
 
 Build tren MacBook
-  cd setup/booth-macos-hdmi-autodelete
-  chmod +x *.sh
-  ./build-agent.sh
+  A) Co ca repo (khuyen nghi):
+     git clone <repo-url>
+     cd harrords_selfbooth/setup/booth-macos-hdmi-autodelete
+     brew install go    # neu chua co Go 1.25+
+     ./build-agent.sh
+
+  B) Chi co folder kit (Downloads) — KHONG build duoc neu thieu source:
+     - Copy file selfbooth-agent (binary Mac) vao folder kit
+     - chmod +x selfbooth-agent
+     - Bo qua build-agent.sh
+
+  C) Chi co folder harrords-backend:
+     ./build-agent.sh ~/path/to/harrords-backend
+
   cp .env.agent.example .env.agent
   # Sua: API_BASE_URL, SERVICE_TOKEN, ROOM_ID, WATCH_DIR
 

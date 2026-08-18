@@ -59,6 +59,12 @@ if [[ -z "$ENV_FILE" || ! -f "$ENV_FILE" ]]; then
 fi
 
 AGENT_BIN="$SCRIPT_DIR/selfbooth-agent"
+# Pre-built zip may ship darwin-arm64 under alternate name
+if [[ ! -f "$AGENT_BIN" && -f "$SCRIPT_DIR/selfbooth-agent-darwin-arm64" ]]; then
+  cp "$SCRIPT_DIR/selfbooth-agent-darwin-arm64" "$AGENT_BIN"
+  chmod +x "$AGENT_BIN"
+fi
+
 BACKEND="$(find_backend 2>/dev/null || true)"
 
 if [[ ! -f "$AGENT_BIN" && -n "$BACKEND" && -f "$BACKEND/selfbooth-agent" ]]; then

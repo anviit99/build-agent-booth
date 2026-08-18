@@ -30,7 +30,13 @@ fi
 
 if [[ -z "$BACKEND_DIR" || ! -d "$BACKEND_DIR/cmd/agent" ]]; then
   echo "Cannot locate harrords-backend/cmd/agent (or selfbooth-backend)." >&2
-  echo "Usage: ./build-agent.sh /path/to/harrords-backend" >&2
+  echo "" >&2
+  echo "Kit zip thuong KHONG kem source. Chon 1 trong 3:" >&2
+  echo "  1) Clone repo tren Mac, roi chay lai ./build-agent.sh trong setup/booth-macos-hdmi-autodelete/" >&2
+  echo "  2) Copy san binary vao folder nay, doi ten: selfbooth-agent, chmod +x selfbooth-agent" >&2
+  echo "  3) Chi dinh duong dan backend: ./build-agent.sh /path/to/harrords-backend" >&2
+  echo "" >&2
+  echo "Can Go 1.25+ cho build: brew install go" >&2
   exit 1
 fi
 
