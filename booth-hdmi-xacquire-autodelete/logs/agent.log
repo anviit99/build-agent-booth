@@ -1,5 +1,0 @@
-2026/07/26 01:14:39.165616 AGENT_LOG_FILE: C:\Users\PC\Desktop\Coding\coding\all\self-booth\finishAll\final\booth-hdmi-xacquire-autodelete\logs\agent.log (rotate at 5242880 bytes, keep 3)
-2026/07/26 01:14:39.166148 === Self Photobooth Agent ===
-2026/07/26 01:14:39.166148 Loaded env file: C:\Users\PC\Desktop\Coding\coding\all\self-booth\finishAll\final\booth-hdmi-xacquire-autodelete\.env.agent
-2026/07/26 01:14:39.166681 AGENT_MODE: booth
-2026/07/26 01:14:39.168260 SERVICE_TOKEN is required — dat .env.agent canh exe (hoac chay run-agent.cmd)
